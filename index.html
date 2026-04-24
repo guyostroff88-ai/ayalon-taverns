@@ -9,54 +9,33 @@
 
 <body class="bg-stone-100 text-gray-900 font-sans">
 
-<!-- NAV -->
-<nav class="flex justify-between items-center p-6 bg-white shadow">
-  <h1 class="text-2xl font-bold">פונדק איילון</h1>
-</nav>
-
-<!-- HERO -->
-<section class="relative h-[75vh] flex flex-col justify-center items-center text-center px-6 text-white">
-
-  <!-- Background Image -->
+<section class="relative h-[75vh] flex flex-col justify-center items-center text-center px-6 text-white overflow-hidden">
   <img src="images/cover.jpeg"
-     class="absolute inset-0 w-full h-full object-cover object-top scale-90 -z-10"
+       class="absolute inset-0 w-full h-full object-cover object-top scale-95 -z-10">
+  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10 -z-10"></div>
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 -z-10"></div>
-
-  <!-- Content -->
-  <div class="p-8 rounded-xl max-w-2xl">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">
-      מאז 1972 – בשרים על האש
-    </h2>
-    <p class="mb-6 text-lg">
-      מסעדת גריל ישראלית קלאסית בפתח תקווה
-    </p>
-
-    <a href="tel:+97239213636"
-       class="bg-white text-black px-6 py-3 rounded-lg font-semibold">
+  <div class="p-6 rounded-2xl max-w-2xl backdrop-blur-sm bg-black/20">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">מאז 1972 – בשרים על האש</h1>
+    <p class="mb-6 text-lg text-gray-200">מסעדת גריל ישראלית קלאסית בפתח תקווה</p>
+    <a href="tel:+97239213636" class="bg-white text-black px-6 py-3 rounded-lg font-semibold">
       התקשר להזמנה
     </a>
   </div>
-
 </section>
 
-<!-- MENU -->
-<section id="menu" class="py-16 px-6 bg-white">
-  <h3 class="text-3xl font-bold text-center mb-4">תפריט</h3>
-
-  <p class="text-center text-gray-600 mb-10 leading-8">
+<section id="menu" class="py-10 px-4 md:px-6 bg-white">
+  <h2 class="text-3xl font-bold text-center mb-2">תפריט</h2>
+  <p class="text-center text-gray-600 mb-8 leading-7">
     ניתן להזמין בפיתה או בצלחת. צלחת שיפודים כוללת צ׳יפס, סלט, חומוס ולחם.<br>
     שדרוג ללאפה: ₪5 | פיתה/לאפה נוספת: ₪7 | תוספת פטריות למנה: ₪7
   </p>
 
-  <div class="max-w-6xl mx-auto space-y-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-    <!-- שיפודים -->
     <div>
-      <h4 class="text-2xl font-bold mb-4">שיפודים</h4>
+      <h3 class="text-2xl font-bold mb-3">שיפודים</h3>
       <div class="overflow-x-auto rounded-xl border">
-        <table class="w-full text-right min-w-[760px]">
+        <table class="w-full text-right min-w-[760px] text-sm">
           <thead class="bg-stone-200">
             <tr>
               <th class="p-3">מנה</th>
@@ -78,17 +57,12 @@
       </div>
     </div>
 
-    <!-- על האש -->
     <div>
-      <h4 class="text-2xl font-bold mb-4">על האש</h4>
+      <h3 class="text-2xl font-bold mb-3">על האש</h3>
       <div class="overflow-x-auto rounded-xl border">
-        <table class="w-full text-right min-w-[520px]">
+        <table class="w-full text-right min-w-[520px] text-sm">
           <thead class="bg-stone-200">
-            <tr>
-              <th class="p-3">מנה</th>
-              <th class="p-3">פיתה</th>
-              <th class="p-3">צלחת</th>
-            </tr>
+            <tr><th class="p-3">מנה</th><th class="p-3">פיתה</th><th class="p-3">צלחת</th></tr>
           </thead>
           <tbody class="divide-y">
             <tr><td class="p-3">סטייק פילה בקר</td><td class="p-3">₪100</td><td class="p-3">₪134</td></tr>
@@ -106,22 +80,98 @@
       </div>
     </div>
 
+    <div>
+      <h3 class="text-2xl font-bold mb-3">סלטים, חומוס ופתיחים</h3>
+      <div class="overflow-x-auto rounded-xl border">
+        <table class="w-full text-right text-sm">
+          <tbody class="divide-y">
+            <tr><td class="p-3">חומוס בשר</td><td class="p-3">₪47</td></tr>
+            <tr><td class="p-3">חומוס פטריות</td><td class="p-3">₪37</td></tr>
+            <tr><td class="p-3">פטריות חמות</td><td class="p-3">₪32</td></tr>
+            <tr><td class="p-3">חומוס צנוברים</td><td class="p-3">₪32</td></tr>
+            <tr><td class="p-3">חומוס / טחינה</td><td class="p-3">₪28</td></tr>
+            <tr><td class="p-3">סלט ירקות וטחינה</td><td class="p-3">₪38</td></tr>
+            <tr><td class="p-3">כבד קצוץ</td><td class="p-3">₪33</td></tr>
+            <tr><td class="p-3">צ׳יפס / סלט</td><td class="p-3">קטן ₪18 | גדול ₪25</td></tr>
+            <tr><td class="p-3">סלטים קטנים: טורקי / חציל / ועוד</td><td class="p-3">₪11</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-bold mb-3">עיקריות וממולאים</h3>
+      <div class="overflow-x-auto rounded-xl border">
+        <table class="w-full text-right text-sm">
+          <tbody class="divide-y">
+            <tr><td class="p-3">דג דניס / לברק</td><td class="p-3">₪120</td></tr>
+            <tr><td class="p-3">מושט</td><td class="p-3">₪80</td></tr>
+            <tr><td class="p-3">כרוב ממולא</td><td class="p-3">₪53</td></tr>
+            <tr><td class="p-3">מוסקה</td><td class="p-3">₪45</td></tr>
+            <tr><td class="p-3">פלפל / בצל / קישוא ממולא</td><td class="p-3">₪45</td></tr>
+            <tr><td class="p-3">תוספות: אורז / שעועית / מג׳דרה</td><td class="p-3">₪16</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-bold mb-3">שתייה וקינוחים</h3>
+      <div class="overflow-x-auto rounded-xl border">
+        <table class="w-full text-right text-sm">
+          <tbody class="divide-y">
+            <tr><td class="p-3">בירה מהחבית</td><td class="p-3">קטן ₪22 | גדול ₪28</td></tr>
+            <tr><td class="p-3">בירה שחורה</td><td class="p-3">₪15</td></tr>
+            <tr><td class="p-3">בקבוק / לימונדה</td><td class="p-3">₪12</td></tr>
+            <tr><td class="p-3">לימונדה גדולה</td><td class="p-3">₪15</td></tr>
+            <tr><td class="p-3">סודה / מים</td><td class="p-3">₪10</td></tr>
+            <tr><td class="p-3">בוואריה / מלבי / מוס</td><td class="p-3">₪22</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-bold mb-3">תוספות</h3>
+      <div class="overflow-x-auto rounded-xl border bg-stone-50">
+        <table class="w-full text-right text-sm">
+          <tbody class="divide-y">
+            <tr><td class="p-3">שדרוג ללאפה</td><td class="p-3">₪5</td></tr>
+            <tr><td class="p-3">פיתה / לאפה נוספת</td><td class="p-3">₪7</td></tr>
+            <tr><td class="p-3">תוספת פטריות למנה</td><td class="p-3">₪7</td></tr>
+            <tr><td class="p-3">פיתה עם סלטים בלבד</td><td class="p-3">₪20</td></tr>
+            <tr><td class="p-3">לאפה עם סלטים בלבד</td><td class="p-3">₪24</td></tr>
+            <tr><td class="p-3">פיתה עם פטריות בלבד</td><td class="p-3">₪24</td></tr>
+            <tr><td class="p-3">לאפה עם פטריות בלבד</td><td class="p-3">₪29</td></tr>
+            <tr><td class="p-3">צלחת סלטים חופשי</td><td class="p-3">₪28</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="py-16 px-6 bg-stone-200 text-center">
-  <h3 class="text-3xl font-bold mb-6">פרטים</h3>
+<section id="contact" class="py-12 px-6 bg-stone-200 text-center">
+  <h2 class="text-3xl font-bold mb-4">פרטים</h2>
   <p>רחוב דנמרק 1, פתח תקווה</p>
   <p>טלפון: 03-921-3636</p>
   <p>שעות פתיחה: 11:00–22:00</p>
+
+  <div class="mt-6 flex justify-center gap-4 flex-wrap">
+    <a href="tel:+97239213636" class="bg-black text-white px-6 py-3 rounded-lg">התקשרו עכשיו</a>
+    <a href="https://www.google.com/maps?q=Denmark+1+Petah+Tikva" class="border border-black px-6 py-3 rounded-lg">ניווט בגוגל</a>
+  </div>
 </section>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/97239213636"
    class="fixed bottom-6 left-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg">
    הזמן בווטסאפ
 </a>
+
+<footer class="text-center p-5 bg-white text-gray-500">
+  © פונדק איילון
+</footer>
 
 </body>
 </html>
