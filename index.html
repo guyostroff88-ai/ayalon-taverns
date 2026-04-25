@@ -9,9 +9,32 @@
 
 <body class="bg-stone-100 text-gray-900 font-sans">
 
-<section class="relative h-[75vh] flex flex-col justify-center items-center text-center px-6 text-white overflow-hidden">
+<!-- NAV -->
+<nav class="fixed top-0 right-0 left-0 z-50 bg-black/40 backdrop-blur-md text-white">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="#home" class="font-bold text-xl">פונדק איילון</a>
+
+    <button onclick="toggleMenu()" class="md:hidden text-3xl leading-none">☰</button>
+
+    <div class="hidden md:flex gap-8 font-semibold">
+      <a href="#menu">תפריט</a>
+      <a href="#reviews">ביקורות</a>
+      <a href="#contact">פרטים</a>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-3 text-center font-semibold">
+    <a href="#menu" onclick="toggleMenu()" class="block">תפריט</a>
+    <a href="#reviews" onclick="toggleMenu()" class="block">ביקורות</a>
+    <a href="#contact" onclick="toggleMenu()" class="block">פרטים</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="relative h-[75vh] flex flex-col justify-center items-center text-center px-6 text-white overflow-hidden">
   <img src="images/cover.jpeg"
-class="absolute inset-0 w-full h-full object-cover object-top scale-95 -translate-x-2 -z-10"
+       class="absolute inset-0 w-full h-full object-cover object-top scale-95 -translate-x-2 -z-10">
+
   <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10 -z-10"></div>
 
   <div class="p-6 rounded-2xl max-w-2xl backdrop-blur-sm bg-black/20">
@@ -23,7 +46,33 @@ class="absolute inset-0 w-full h-full object-cover object-top scale-95 -translat
   </div>
 </section>
 
-<section id="menu" class="py-10 px-4 md:px-6 bg-white">
+<!-- REVIEWS -->
+<section id="reviews" class="py-10 px-4 md:px-6 bg-stone-100 scroll-mt-20">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-2">מה אומרים עלינו</h2>
+    <p class="text-gray-600 mb-8">ביקורות נבחרות של לקוחות</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 border shadow-sm">
+        <p class="text-yellow-500 text-xl mb-3">★★★★★</p>
+        <p class="text-gray-700">“אוכל טרי, טעים ושירות מהיר.”</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 border shadow-sm">
+        <p class="text-yellow-500 text-xl mb-3">★★★★★</p>
+        <p class="text-gray-700">“מנות נדיבות ואווירה של מסעדה ישראלית אמיתית.”</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 border shadow-sm">
+        <p class="text-yellow-500 text-xl mb-3">★★★★★</p>
+        <p class="text-gray-700">“מקום ותיק, מוכר ואהוב בפתח תקווה.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="py-10 px-4 md:px-6 bg-white scroll-mt-20">
   <h2 class="text-3xl font-bold text-center mb-2">תפריט</h2>
   <p class="text-center text-gray-600 mb-8 leading-7">
     ניתן להזמין בפיתה או בצלחת. צלחת שיפודים כוללת צ׳יפס, סלט, חומוס ולחם.<br>
@@ -60,7 +109,7 @@ class="absolute inset-0 w-full h-full object-cover object-top scale-95 -translat
     <div>
       <h3 class="text-2xl font-bold mb-3">על האש</h3>
       <div class="overflow-x-auto rounded-xl border">
-<table class="w-full text-right text-sm table-auto">
+        <table class="w-full text-right text-sm table-auto">
           <thead class="bg-stone-200">
             <tr><th class="p-3">מנה</th><th class="p-3">פיתה</th><th class="p-3">צלחת</th></tr>
           </thead>
@@ -114,7 +163,8 @@ class="absolute inset-0 w-full h-full object-cover object-top scale-95 -translat
         </table>
       </div>
     </div>
-<div>
+
+    <div>
       <h3 class="text-2xl font-bold mb-3">תוספות</h3>
       <div class="overflow-x-auto rounded-xl border bg-stone-50">
         <table class="w-full text-right text-sm">
@@ -131,6 +181,7 @@ class="absolute inset-0 w-full h-full object-cover object-top scale-95 -translat
         </table>
       </div>
     </div>
+
     <div>
       <h3 class="text-2xl font-bold mb-3">שתייה וקינוחים</h3>
       <div class="overflow-x-auto rounded-xl border">
@@ -147,12 +198,11 @@ class="absolute inset-0 w-full h-full object-cover object-top scale-95 -translat
       </div>
     </div>
 
-    
-
   </div>
 </section>
 
-<section id="contact" class="py-12 px-6 bg-stone-200 text-center">
+<!-- CONTACT -->
+<section id="contact" class="py-12 px-6 bg-stone-200 text-center scroll-mt-20">
   <h2 class="text-3xl font-bold mb-4">פרטים</h2>
   <p>רחוב דנמרק 1, פתח תקווה</p>
   <p>טלפון: 03-921-3636</p>
@@ -164,10 +214,15 @@ class="absolute inset-0 w-full h-full object-cover object-top scale-95 -translat
   </div>
 </section>
 
-
 <footer class="text-center p-5 bg-white text-gray-500">
   © פונדק איילון
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  }
+</script>
 
 </body>
 </html>
